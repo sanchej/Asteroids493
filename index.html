@@ -1,0 +1,108 @@
+<html>
+
+<link rel="icon" href="src/player/player.gif">
+<title>Asteroids</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- HTML -->
+<body>
+  <div class='outer-container'>
+      <div class='game-window'>
+        
+        <!-- Main Menu -->
+        <img  id="Background" src="src/frontpage_background.jpg" alt="Background">
+            
+            <div id="menu">
+                <div id="block">
+                    <img  id="asteroid1" src="src/asteroid.png" alt="Asteroid">
+                    <h1 id="title">Asteroids</h1>
+                    <img  id="asteroid2" src="src/asteroid.png" alt="Asteroid">   
+                    
+                </div>
+
+                <div id="GOscreen">
+                  <p>GAME OVER!</p>
+                  <p>YOU HAVE TO FIX YOUR SPACESHIP!</p>
+                  <p id="scoredisp"></p>
+                  <button id="Reset">Start Over</button>
+                </div>
+                
+                <div id="btns">
+                    <button id="Play" class="landbtn">Play Game!</button>
+                    <button id="sett" class="landbtn">Settings</button>
+                </div>
+            </div>
+        <!-- Settings -->
+        <div id="settings">
+                
+          <h1 id="SettingsHeader"><b>Settings</b></h1>
+          <h1 class="settings"><b>Volume:</b> <span id="VolNum"></span></h1>  
+          
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+
+          <h1 class="settings"><b>Difficulty</b></h1>
+          <button id="easy" type="button" class="diff">Easy</button> 
+          <button id="norm" type="button" class="diff">Normal</button> 
+          <button id="hard" type="button" class="diff">Hard</button> 
+          <button id="Close" type="button" class="diff">Close</button> 
+        </div>
+        <!-- Tutorial -->
+        <div id="HTP" class="HTP">
+          <h1 id="HTPtitle"><b>How to play</b></h1>
+          <p class="HTPpar"><b>Avoid</b> <i>asteroids</i>!</p>
+          <img  id="HTPasteroid" class="HTPimg" src="src/asteroid.png" alt="asteroid">
+          <p id="Collect" class="HTPpar"><b>Collect</b> <i>shields</i>! <b>Travel</b> through the <i>portals</i> to the next level!</p>
+          <img id="HTPshield" class="HTPimg" src="src/shield.gif" alt="shield">
+          <img id="HTPportal" class="HTPimg" src="src/port.gif" alt="portal">
+          <p id="Gain" class="HTPpar"><b>Gain</b> as many <i>points</i> as possible!</p>
+          <button id="HTPStart">Start</button>
+        </div>
+
+        <div id="Ready">
+          <h1 id="ReadyTitle"><b>Get Ready!</b></h1>
+          <img id="Readyimg" src="src/arrowkeys.png" alt="Arrow Keys">
+          <h1 id="instructions">Use arrow keys to move.</h1>
+          <div id="game_right_section2">
+            <div id="scoreword">
+                SCORE
+                <div id="score_num">0</div>
+            </div>
+            <div id="danger">DANGER
+            <div id="danger_num"></div></div>
+            <div id="level">LEVEL
+            <div id="level_num"></div></div>
+          </div>
+        </div>  
+        <audio id="die" src="src/audio/die.mp3" ></audio>
+        <audio id="collect" src="src/audio/collect.mp3" ></audio>
+        <!-- Actual Game -->
+        <div id="actual_game">
+          <img id="player" class="pl" src="src/player/player.gif" alt="rocket">
+          <div id="aster" class="asteroidSection">
+            <div class="curAstroid"> </div>
+          </div>
+          <div id="game_right_section">
+              <div id="scoreword">
+                  SCORE
+                  <div id="score_num2"></div>
+              </div>
+              <div id="danger">DANGER
+              <div id="danger_num2"></div></div>
+              <div id="level">LEVEL
+              <div id="level_num2"></div></div>
+          </div>
+        </div>    
+      </div> <!-- end game-window -->
+  </div> <!-- end outer-container -->
+  <script src='scripts/page.js'></script>
+</body>
+
+</html>
